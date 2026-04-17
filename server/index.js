@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://aiwebsite-1-ddaf.onrender.com/",
+    origin: "https://aiwebsite-1-ddaf.onrender.com",
     credentials: true,
   }),
 );
