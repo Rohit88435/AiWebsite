@@ -28,6 +28,10 @@ app.use(
     credentials: true,
   }),
 );
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Opener-Policy', 'unsafe-none');
+  next();
+});
 
 // Add security headers for popup/window operations
 app.use((req, res, next) => {
