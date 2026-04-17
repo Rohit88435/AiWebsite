@@ -34,11 +34,7 @@ app.use((req, res, next) => {
 });
 
 // Add security headers for popup/window operations
-app.use((req, res, next) => {
-  res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
-  res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-  next();
-});
+
 
 app.get("/", (req, res) => {
   res.send("Api is running");
